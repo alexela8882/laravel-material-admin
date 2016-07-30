@@ -8,7 +8,7 @@
     <title>Laravel</title>
 
     <!-- BEGIN STYLESHEETS -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+    <link href="{{ URL::asset('fonts/font.css?family=Roboto:300italic,400italic,300,400,500,700,900') }}" rel="stylesheet" type="text/css"/>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('assets/css/theme-default/bootstrap.css') }}" />
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('assets/css/theme-default/materialadmin.css') }}" />
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('assets/css/theme-default/font-awesome.min.css') }}" />
@@ -21,9 +21,9 @@
     <script type="text/javascript" src="{{ URL::asset('assets/js/libs/utils/respond.min.js') }}"></script>
     <![endif]-->
 </head>
-<body class="menubar-hoverable header-fixed menubar-pin ">
+<body class="menubar-hoverable header-fixed menubar-pin">
 
-    @if (Auth::check())
+    @if (Auth::check() && Auth::user()->role === 1)
         @include('includes.header')
         @include('includes.sidebar')
 
@@ -51,7 +51,7 @@
     <script src="{{ URL::asset('assets/js/core/source/AppForm.js') }}"></script>
     <script src="{{ URL::asset('assets/js/core/source/AppNavSearch.js') }}"></script>
     <script src="{{ URL::asset('assets/js/core/source/AppVendor.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/core/demo/Demo.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/core/demo/Demo.js') }}"></script>
     <!-- END JAVASCRIPT -->
 </body>
 </html>

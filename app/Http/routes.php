@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+// charts
+Route::group(['prefix' => 'charts'], function () {
+	Route::get('/', 'ChartController@index');
+});

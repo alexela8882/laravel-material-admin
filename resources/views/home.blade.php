@@ -4,9 +4,7 @@
 <div id="content">
 	<section>
 		<div class="section-header">
-			<ol class="breadcrumb">
-				<li class="active">You're Logged In!</li>
-			</ol>
+			<h1 class="text-xxxxl text-light text-center">Welcome {{ Auth::user()->role == 1 ? 'Administrator' : 'User' }}!</h1>
 		</div>
 	</section>
 </div>

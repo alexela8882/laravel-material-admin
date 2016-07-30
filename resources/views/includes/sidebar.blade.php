@@ -1,4 +1,4 @@
-BEGIN MENUBAR-->
+<!-- BEGIN MENUBAR -->
 <div id="menubar" class="menubar-inverse ">
 	<div class="menubar-fixed-panel">
 		<div>
@@ -19,7 +19,7 @@ BEGIN MENUBAR-->
 
 			<!-- BEGIN DASHBOARD -->
 			<li class="active">
-				<a href="{{ url('home') }}" >
+				<a href="{{ url('charts') }}" >
 					<div class="gui-icon"><i class="md md-home"></i></div>
 					<span class="title">Dashboard</span>
 				</a>
